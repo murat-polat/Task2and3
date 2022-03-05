@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="card text-center">
+<div class="card-body">
+
+  <p>What would you like today? (choice 'how is business?' to attempt small talk, or 'not hungry' to stop)
+  </p>
+
+</div>
+  
+</div>
+
+<div class="card text-center">
+  <div class="card-body">   
+    
+    <a class="btn btn-secondary " href="#" id="not_hungry"  >
+      Not hungry</a>
+      <a class="btn btn-primary" href="{% url 'menu:index' %}">
+        how is business?</a
+        >
+  </div>
+  </div>
+  
+  
+  <script>
+    $(document).ready(function(){
+      $('#not_hungry').on('click', function(){
+        alert('Alright, Welcome back!');
+      });
+    });
+  </script>
+{% endblock %}
