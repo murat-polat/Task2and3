@@ -6,7 +6,7 @@
       <div class="card mb-3">
         <div class="card-body">
           <p class="lead">{{ question.question_text }}</p>
-          <a href="{% url 'menu:detail' question.id %}" class="btn btn-primary btn-sm">Submit</a>
+          <a href="{% url 'menu:detail' question.id %}" class="btn btn-primary btn-sm">View & Submit</a>
           <a href="{% url 'menu:results' question.id %}" class="btn btn-secondary btn-sm">Results</a>
         </div>
       </div>
