@@ -16,9 +16,13 @@
     <title>Welcome to Cafeteria {% block title %}{% endblock %}</title>
   </head>
   <body>
-    <!-- NavBar -->
-    {% include 'partials/_navbar.html' %}
-    <div class="container">
+    
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+      <div class="container">
+        <a class="navbar-brand" href="/">Cafeteria</a>
+      </div>
+    </nav>
+    <div class="container" >
       <div class="row">
         <div class="col-md-6 m-auto">
           {% block content %}{% endblock %}
