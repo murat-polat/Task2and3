@@ -9,18 +9,20 @@
 	</li>
 	{% endfor %}
 </ul>
+
+<a class="btn btn-secondary" href="{% url 'menu:index' %}">Back To menu</a>
+<a class="btn btn-primary" href="{% url 'menu:detail' question.id %}">Try again?</a>
+<div class="container">
 <h3 class="mb-5 text-center"> Overview </h3>
 <ul class="list-group mb-5">
 	{% for choice in question.choice_set.all %}
 	<li class="list-group-item">
-	
-		
+		{{ choice.choice_text }} <span class="badge badge-danger float-right"> Meal sum : {{choice.total_sum}} </span>    <span class="badge badge-success float-right"> Total sum : {{choice.meal_sum}} </span>	
 		
 	</li>
 	{% endfor %}
 </ul>
+</div>
 
 
-<a class="btn btn-secondary" href="{% url 'menu:index' %}">Back To menu</a>
-<a class="btn btn-dark" href="{% url 'menu:detail' question.id %}">Try again?</a>
 {% endblock %}
